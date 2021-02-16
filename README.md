@@ -29,13 +29,15 @@ Thie project contains the following modules:
 
 [![Build Status](https://travis-ci.org/ISA-tools/isa-rwval.svg?branch=master)](https://travis-ci.org/ISA-tools/isa-rwval)
 [![Coverage Status](https://coveralls.io/repos/github/ISA-tools/isa-rwval/badge.svg?branch=master)](https://coveralls.io/github/ISA-tools/isa-rwval?branch=master)
-[![Documentation Status](https://isa-tools.org/isa-api/content/index.html)](https://isa-tools.org/isa-api/content/index.html)
-
+[![Documentation Status](https://img.shields.io/badge/documentation-latest-brightgreen)](https://isa-tools.org/isa-api/content/index.html)
+[![License](https://img.shields.io/badge/license-CPAL-blue)](https://img.shields.io/badge/license-CPAL-blue)
 
 ----
 *Authors*: [Code contributors](https://github.com/ISA-tools/isatools-core/graphs/contributors).
 
 *License*: This code is licensed under the [CPAL License](https://raw.githubusercontent.com/ISA-tools/isa-rwval/master/LICENSE.txt).
+
+
 
 *Repository*: [https://github.com/ISA-tools/isa-rwval](https://github.com/ISA-tools/isa-rwval)
 
