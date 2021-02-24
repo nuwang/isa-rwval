@@ -731,7 +731,7 @@ class ISAJSONEncoder(JSONEncoder):
         def get_value(o):
             if isinstance(o, OntologyAnnotation):
                 return get_ontology_annotation(o)
-            elif isinstance(o, (string_types, int, float)):
+            elif isinstance(o, (str, int, float)):
                 return o
             else:
                 raise ValueError("Unexpected value type found: %s", type(o))
