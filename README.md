@@ -1,4 +1,4 @@
-This repo is forked from https://github.com/ISA-tools/isa-api/tree/py2_isatools-lite and needs some updating.
+This repo is forked originally from https://github.com/ISA-tools/isa-api/tree/py2_isatools-lite.
 
 <img align="left" src="https://isa-tools.org/wp-content/uploads/2016/10/687474703a2f2f7777772e6973612d746f6f6c732e6f72672f77702d636f6e74656e742f75706c6f6164732f323031362f30332f6973612d6170692d6c6f676f2e706e67-4.png" width="150px">
 <br>
@@ -15,7 +15,7 @@ To find out who's using ISA and about the ISA development and user community, se
 
 The *ISA API*  aims to provide you, the developer, with a set of tools to help you easily and quickly build your own ISA objects, validate, and convert between serializations of ISA-formatted datasets and other formats/schemas (e.g. SRA schemas). The ISA API is published on PyPI as the `isatools` package.
 
-This project is the `isatools-rwval` package that provides ISA format read/write/validation functionality that the ISA API builds on.
+This project is the `isa-rwval` package that provides ISA format read/write/validation functionality that the ISA API builds on.
 
 Thie project contains the following modules:
 
@@ -31,14 +31,14 @@ Thie project contains the following modules:
 [![Documentation Status](https://readthedocs.org/projects/isatools/badge/?version=latest)](http://isatools.readthedocs.org/en/latest/?badge=latest)
 
 ----
-*Authors*: [Code contributors](https://github.com/ISA-tools/isatools-core/graphs/contributors).
+*Authors*: [Code contributors](https://github.com/ISA-tools/isa-rwval/graphs/contributors).
 
-*License*: This code is licensed under the [? License](https://raw.githubusercontent.com/ISA-tools/isatools-core/master/LICENSE.txt).
+*License*: This code is licensed under the [? License](https://raw.githubusercontent.com/ISA-tools/isa-rwval/master/LICENSE.txt).
 
-*Repository*: [https://github.com/ISA-tools/isatools-core](https://github.com/ISA-tools/isatools-core)
+*Repository*: [https://github.com/ISA-tools/isatools-core](https://github.com/ISA-tools/isa-rwval)
 
 *ISA team email*: [isatools@googlegroups.com](mailto:isatools@googlegroups.com)
 
 *ISA discussion group*: [https://groups.google.com/forum/#!forum/isaforum](https://groups.google.com/forum/#!forum/isaforum)
 
-*Github issue tracker*: [https://github.com/ISA-tools/isa-api/issues](https://github.com/ISA-tools/isatools-core/issues)
+*Github issue tracker*: [https://github.com/ISA-tools/isa-api/issues](https://github.com/ISA-tools/isa-rwval/issues)
