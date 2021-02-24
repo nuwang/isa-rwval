@@ -1,6 +1,16 @@
 #!/usr/bin/env python
 
+import os
 from setuptools import setup
+
+
+# Utility function to read the README file.
+# Used for the long_description.  It's nice, because now 1) we have a top level
+# README file and 2) it's easier to type in the README file than to put a raw
+# string in below ...
+def read(f_name):
+    return open(os.path.join(os.path.dirname(__file__), f_name)).read()
+
 
 setup(
     name='isa-rwval',
@@ -13,6 +23,8 @@ setup(
     description='Metadata tracking tools help to manage an increasingly '
                 'diverse set of life science, environmental and biomedical '
                 'experiments',
+    long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     author='ISA Infrastructure Team',
     author_email='isatools@googlegroups.com',
     url='https://github.com/ISA-tools/isa-rwval',
