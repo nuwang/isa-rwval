@@ -20,7 +20,7 @@ from bisect import bisect_left, bisect_right
 from collections import OrderedDict
 
 from collections import namedtuple
-from six.moves import zip_longest, zip
+from itertools import zip_longest
 
 from isatools.model import *
 

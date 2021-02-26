@@ -16,7 +16,6 @@ from __future__ import absolute_import
 import abc
 import networkx as nx
 import warnings
-from six import string_types
 
 from isatools.errors import ISAModelAttributeError
 
@@ -64,7 +63,7 @@ class Comment(object):
 
     @name.setter
     def name(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
             self.__name = val
         else:
             raise ISAModelAttributeError('Comment.name must be a string')
@@ -76,7 +75,7 @@ class Comment(object):
 
     @value.setter
     def value(self, val):
-        if isinstance(val, string_types):
+        if isinstance(val, str):
             self.__value = val
         else:
             raise ISAModelAttributeError('Comment.value must be a string')
@@ -239,7 +238,7 @@ class MetadataMixin:
 
     @filename.setter
     def filename(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
                 self.__filename = val
         else:
             raise ISAModelAttributeError('{0}.filename must be a string'
@@ -252,7 +251,7 @@ class MetadataMixin:
 
     @identifier.setter
     def identifier(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
                 self.__identifier = val
         else:
             raise ISAModelAttributeError('{0}.identifier must be a string not {1}'
@@ -265,7 +264,7 @@ class MetadataMixin:
 
     @title.setter
     def title(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
             self.__title = val
         else:
             raise ISAModelAttributeError('{0}.title must be a string'
@@ -278,7 +277,7 @@ class MetadataMixin:
 
     @description.setter
     def description(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
             self.__description = val
         else:
             raise ISAModelAttributeError('{0}.description must be a string'
@@ -291,7 +290,7 @@ class MetadataMixin:
 
     @submission_date.setter
     def submission_date(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
             self.__submission_date = val
         else:
             raise ISAModelAttributeError('{0}.submission_date must be a string'
@@ -304,7 +303,7 @@ class MetadataMixin:
 
     @public_release_date.setter
     def public_release_date(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
             self.__public_release_date = val
         else:
             raise ISAModelAttributeError('{0}.public_release_date must be a '
@@ -568,7 +567,7 @@ class OntologySource(Commentable):
 
     @name.setter
     def name(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'OntologySource.name must be a str; got {0}:{1}'
                 .format(val, type(val)))
@@ -582,7 +581,7 @@ class OntologySource(Commentable):
     
     @file.setter
     def file(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'OntologySource.file must be a str; got {0}:{1}'
                 .format(val, type(val)))
@@ -596,7 +595,7 @@ class OntologySource(Commentable):
 
     @version.setter
     def version(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'OntologySource.version must be a str; got {0}:{1}'
                 .format(val, type(val)))
@@ -610,7 +609,7 @@ class OntologySource(Commentable):
 
     @description.setter
     def description(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'OntologySource.description must be a str; got {0}:{1}'
                 .format(val, type(val)))
@@ -676,7 +675,7 @@ class OntologyAnnotation(Commentable):
 
     @term.setter
     def term(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'OntologyAnnotation.term must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -705,7 +704,7 @@ class OntologyAnnotation(Commentable):
 
     @term_accession.setter
     def term_accession(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'OntologyAnnotation.term_accession must be a str or None')
         else:
@@ -776,7 +775,7 @@ class Publication(Commentable):
 
     @pubmed_id.setter
     def pubmed_id(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Publication.pubmed_id must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -790,7 +789,7 @@ class Publication(Commentable):
 
     @doi.setter
     def doi(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Publication.doi must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -804,7 +803,7 @@ class Publication(Commentable):
 
     @author_list.setter
     def author_list(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Publication.author_list must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -818,7 +817,7 @@ class Publication(Commentable):
 
     @title.setter
     def title(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Publication.title must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -921,7 +920,7 @@ class Person(Commentable):
     
     @last_name.setter
     def last_name(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Person.last_name must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -935,7 +934,7 @@ class Person(Commentable):
 
     @first_name.setter
     def first_name(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Person.first_name must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -949,7 +948,7 @@ class Person(Commentable):
 
     @mid_initials.setter
     def mid_initials(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Person.mid_initials must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -963,7 +962,7 @@ class Person(Commentable):
 
     @email.setter
     def email(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Person.email must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -977,7 +976,7 @@ class Person(Commentable):
 
     @phone.setter
     def phone(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Person.phone must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -991,7 +990,7 @@ class Person(Commentable):
 
     @fax.setter
     def fax(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Person.fax must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -1005,7 +1004,7 @@ class Person(Commentable):
 
     @address.setter
     def address(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Person.address must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -1019,7 +1018,7 @@ class Person(Commentable):
 
     @affiliation.setter
     def affiliation(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Person.affiliation must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -1145,7 +1144,7 @@ class StudyAssayMixin:
 
     @filename.setter
     def filename(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 '{0}.filename must be a str or None; got {1}:{2}'
                 .format(type(self).__name__, val, type(val)))
@@ -1823,7 +1822,7 @@ class StudyFactor(Commentable):
 
     @name.setter
     def name(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'StudyFactor.name must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -1963,7 +1962,7 @@ class Assay(Commentable, StudyAssayMixin, object):
 
     @technology_platform.setter
     def technology_platform(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Assay.technology_platform must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -2096,7 +2095,7 @@ class Protocol(Commentable):
 
     @name.setter
     def name(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Protocol.name must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -2125,7 +2124,7 @@ class Protocol(Commentable):
 
     @description.setter
     def description(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Protocol.description must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -2139,7 +2138,7 @@ class Protocol(Commentable):
 
     @uri.setter
     def uri(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Protocol.uri must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -2153,7 +2152,7 @@ class Protocol(Commentable):
 
     @version.setter
     def version(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Protocol.version must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -2353,7 +2352,7 @@ class ParameterValue(Commentable):
     def value(self, val):
         if val is not None \
                 and not isinstance(
-                    val, (string_types, int, float, OntologyAnnotation)):
+                    val, (str, int, float, OntologyAnnotation)):
             raise ISAModelAttributeError(
                 'ParameterValue.value must be a string, numeric, an '
                 'OntologyAnnotation, or None; got {0}:{1}'
@@ -2432,7 +2431,7 @@ class ProtocolComponent(Commentable):
 
     @name.setter
     def name(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'ProtocolComponent.name must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -2508,7 +2507,7 @@ class Source(Commentable):
 
     @name.setter
     def name(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Source.name must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -2621,7 +2620,7 @@ class Characteristic(Commentable):
     def value(self, val):
         if val is not None \
                 and not isinstance(
-                    val, (string_types, int, float, OntologyAnnotation)):
+                    val, (str, int, float, OntologyAnnotation)):
             raise ISAModelAttributeError(
                 'Characteristic.value must be a string, numeric, an '
                 'OntologyAnnotation, or None; got {0}:{1}'
@@ -2719,7 +2718,7 @@ class Sample(Commentable):
 
     @name.setter
     def name(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 'Sample.name must be a str or None; got {0}:{1}'
                 .format(val, type(val)))
@@ -2844,7 +2843,7 @@ class Material(Commentable):
 
     @name.setter
     def name(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 '{0}.name must be a str or None; got {1}:{2}'
                 .format(type(self).__name__, val, type(val)))
@@ -2858,7 +2857,7 @@ class Material(Commentable):
 
     @type.setter
     def type(self, val):
-        if val is not None and not isinstance(val, string_types) \
+        if val is not None and not isinstance(val, str) \
                 and val not in ('Extract Name', 'Labeled Extract Name'):
             raise ISAModelAttributeError(
                 '{0}.type must be a str in ("Extract Name", "Labeled Extract '
@@ -3001,7 +3000,7 @@ class FactorValue(Commentable):
     def value(self, val):
         if val is not None \
                 and not isinstance(
-                    val, (string_types, int, float, OntologyAnnotation)):
+                    val, (str, int, float, OntologyAnnotation)):
             raise ISAModelAttributeError(
                 'FactorValue.value must be a string, numeric, an '
                 'OntologyAnnotation, or None; got {0}:{1}'
@@ -3115,7 +3114,7 @@ class Process(Commentable):
 
     @name.setter
     def name(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
             self.__name = val
         else:
             raise ISAModelAttributeError('Process.name must be a string')
@@ -3142,7 +3141,7 @@ class Process(Commentable):
 
     @date.setter
     def date(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
             self.__date = val
         else:
             raise ISAModelAttributeError('Process.date must be a string')
@@ -3154,7 +3153,7 @@ class Process(Commentable):
 
     @performer.setter
     def performer(self, val):
-        if val is not None and isinstance(val, string_types):
+        if val is not None and isinstance(val, str):
             self.__performer = val
         else:
             raise ISAModelAttributeError('Process.performer must be a string')
@@ -3294,7 +3293,7 @@ class DataFile(Commentable):
 
     @filename.setter
     def filename(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 '{0}.name must be a str or None; got {1}:{2}'
                 .format(type(self).__name__, val, type(val)))
@@ -3308,7 +3307,7 @@ class DataFile(Commentable):
 
     @label.setter
     def label(self, val):
-        if val is not None and not isinstance(val, string_types):
+        if val is not None and not isinstance(val, str):
             raise ISAModelAttributeError(
                 '{0}.label must be a str or None; got {1}:{2}'
                 .format(type(self).__name__, val, type(val)))

@@ -1,4 +1,3 @@
-six
 networkx
 numpy
 pandas
