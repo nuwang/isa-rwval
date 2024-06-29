@@ -41,7 +41,7 @@ setup(
         'Programming Language :: Python :: 3.9',
         ],
     install_requires=[
-        'networkx==2.5'
+        'networkx>=2.5'
     ],
     extras_require={
         'viz': ['matplotlib'],
