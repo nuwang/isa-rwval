@@ -14,7 +14,7 @@ def read(f_name):
 
 setup(
     name='isa-rwval',
-    version='0.10.10',
+    version='0.10.11',
     packages=['isatools',
               'isatools.errors'
               ],
@@ -39,6 +39,9 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         ],
     install_requires=[
         'networkx>=2.5'
