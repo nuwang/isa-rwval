@@ -44,4 +44,4 @@ Source = "https://github.com/ISA-tools/isa-rwval"
 packages = ["isatools", "isatools.errors"]
 
 [tool.setuptools.package-data]
-"" = ["LICENSE.txt", "README.md"]
+"*" = ["LICENSE.txt", "README.md"]
